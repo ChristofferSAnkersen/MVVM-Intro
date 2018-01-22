@@ -26,14 +26,15 @@ namespace WpfApp3.Views
             InitializeComponent();
             textFirstName.Text = mainViewModel.ImportantPerson.FirstName;
             textLastName.Text = mainViewModel.ImportantPerson.LastName;
-            textFullName.Text = mainViewModel.ImportantPerson.FullName;
 
         }
 
         public void  GemKnap_Click(object sender, RoutedEventArgs e)
         {
-            //mainViewModel.ImportantPerson.FirstName = textFirstName.Text;
-            //mainViewModel.ImportantPerson.LastName = textLastName.Text;
+            mainViewModel.ImportantPerson.FirstName = textFirstName.Text;
+            mainViewModel.ImportantPerson.LastName = textLastName.Text;
+            textFullName.Text = mainViewModel.ImportantPerson.FirstName + " " + mainViewModel.ImportantPerson.LastName;
+
         }
     }
 }

@@ -1,19 +1,23 @@
-﻿<Window x:Class="WpfApp3.Views.Window1"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp3.Views"
+        xmlns:ViewModels="clr-namespace:WpfApp3.ViewModels" x:Class="WpfApp3.Views.Window1"
         mc:Ignorable="d"
         Title="Window1" Height="400" Width="500">
+    <Window.DataContext>
+        <ViewModels:MainViewModel/>
+    </Window.DataContext>
     <Grid>
-        <TextBox x:Name="textFirstName" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" Text="TextBox " VerticalAlignment="Top" Width="120" Margin="212,116,0,0"/>
+        <TextBox x:Name="textFirstName" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" Text="{Binding Path=ImportantPerson.FirstName, Mode=TwoWay}" VerticalAlignment="Top" Width="120" Margin="212,116,0,0"/>
         <Label x:Name="labelFirstName" Content="Fornavn:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="107,112,0,0"/>
-        <TextBox x:Name="textLastName" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Margin="212,163,0,0"/>
+        <TextBox x:Name="textLastName" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" Text="{Binding Path=ImportantPerson.LastName, Mode=TwoWay}" VerticalAlignment="Top" Width="120" Margin="212,163,0,0"/>
         <Label x:Name="labelLastName" Content="Efternavn:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="107,159,0,0"/>
         <Label x:Name="labelFullName" Content="Fulde navn:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="107,217,0,0"/>
-        <TextBlock x:Name="textFullName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="212,222,0,0" Height="26" Width="120"/>
-        <Button x:Name="GemKnap" Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="366,220,0,0" Click="GemKnap_Click"/>
+        <TextBlock x:Name="textFullName" HorizontalAlignment="Left" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Margin="212,222,0,0" Height="26" Width="120" DataContext="{Binding Path=ImportantPerson.FullName, Mode=TwoWay}"/>
+        <Button x:Name="GemKnap" Content="Gem" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="366,220,0,0" Click="GemKnap_Click"/>
 
     </Grid>
 </Window>

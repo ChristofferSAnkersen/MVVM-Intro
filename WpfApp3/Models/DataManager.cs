@@ -13,7 +13,7 @@ namespace WpfApp3.Models
 
         public DataManager()
         {
-            ImportantPerson = new Person { FirstName = "Tyren", LastName = "DK" };
+            ImportantPerson = new Person { FirstName = "Anders", LastName = "And" };
         }
     }
 
