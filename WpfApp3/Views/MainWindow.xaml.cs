@@ -26,6 +26,7 @@ namespace WpfApp3.Views
             InitializeComponent();
             textFirstName.Text = mainViewModel.ImportantPerson.FirstName;
             textLastName.Text = mainViewModel.ImportantPerson.LastName;
+            textFullName.Text = mainViewModel.ImportantPerson.FullName;
 
         }
 
