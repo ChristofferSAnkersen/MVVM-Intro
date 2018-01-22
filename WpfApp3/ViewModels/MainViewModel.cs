@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WpfApp3.Models;
-using WpfApp3.Views;
 
 namespace WpfApp3.ViewModels
 {
