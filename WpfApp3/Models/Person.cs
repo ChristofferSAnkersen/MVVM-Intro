@@ -9,7 +9,6 @@ namespace WpfApp3.Models
 {
     public class Person : INotifyPropertyChanged
     {
-        //DataManager DMM = new DataManager();
         private string firstname;
         private string lastname;
         private string fullname;
@@ -50,20 +49,11 @@ namespace WpfApp3.Models
             {
                 return fullname = firstname + " " + lastname;
             }
-            set
-            {
-                if (fullname != value)
-                    fullname = value;
-                OnPropertyChanged("FullName");
-            }
         }
 
         private void OnPropertyChanged(string property)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(property));
-            }
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
