@@ -16,12 +16,11 @@ using WpfApp3.ViewModels;
 namespace WpfApp3.Views
 {
     /// <summary>
-    /// Interaction logic for Window1.xaml
+    /// Interaction logic for MainWindow2.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class MainWindow2 : Window
     {
-        //MainViewModel mainViewModel = new MainViewModel();
-        public Window1()
+        public MainWindow2()
         {
             InitializeComponent();
             DataContext = new MainViewModel();

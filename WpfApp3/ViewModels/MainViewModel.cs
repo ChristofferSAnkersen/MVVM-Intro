@@ -11,11 +11,17 @@ namespace WpfApp3.ViewModels
     public class MainViewModel
     {
         public Person ImportantPerson { get; set; }
+
+        public List<Person> ImportantPersons { get; set; }
         
         public MainViewModel()
         {
             DataManager DM = new DataManager();
             ImportantPerson = DM.ImportantPerson;
+            ImportantPersons = DM.ImportantPersons;
+            
+            //ImportantPersons = DM.ImportantPersons;
+             
         }
     }
 }
